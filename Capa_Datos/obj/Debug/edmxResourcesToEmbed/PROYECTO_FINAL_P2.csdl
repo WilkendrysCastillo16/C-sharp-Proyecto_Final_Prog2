@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTO_FINAL_P2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEPARTAMENTO">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_Departamento" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Siglas" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="IdDocumento" />
+    </Key>
+    <Property Name="IdDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario_ID" Type="Int32" />
+    <Property Name="Origen_Departamento" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Destino_Departamento" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK__DOCUMENTO__Usuar__1CF15040" FromRole="DOCUMENTO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Departamento" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Cargo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DOCUMENTO" Relationship="Self.FK__DOCUMENTO__Usuar__1CF15040" FromRole="USUARIO" ToRole="DOCUMENTO" />
+  </EntityType>
+  <Association Name="FK__DOCUMENTO__Usuar__1CF15040">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="DOCUMENTO" Type="Self.DOCUMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DOCUMENTO">
+        <PropertyRef Name="Usuario_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROYECTO_FINAL_P2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" />
+    <EntitySet Name="DOCUMENTO" EntityType="Self.DOCUMENTO" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="FK__DOCUMENTO__Usuar__1CF15040" Association="Self.FK__DOCUMENTO__Usuar__1CF15040">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="DOCUMENTO" EntitySet="DOCUMENTO" />
+    </AssociationSet>
+    <FunctionImport Name="Codigo_Documentos" />
+    <FunctionImport Name="REPORTE_USUARIOS" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_USUARIOS_Result)">
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_DEPARTAMENTOS" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_DEPARTAMENTOS_Result)">
+      <Parameter Name="DEPARTAMENTO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_TODO_LOS_DOCUMENTOS" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_TODO_LOS_DOCUMENTOS_Result)">
+      <Parameter Name="Documentos" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_EMPLEADOS" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_EMPLEADOS_Result)">
+      <Parameter Name="USUAR" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_ORIGEN_POR_DEPARTAMENTO" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_ORIGEN_POR_DEPARTAMENTO_Result)">
+      <Parameter Name="DEPT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_DEPARTAMENTO_DESTINO" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_DEPARTAMENTO_DESTINO_Result)">
+      <Parameter Name="DEPT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="REPORTE_RANGO_FECHA" ReturnType="Collection(PROYECTO_FINAL_P2Model.REPORTE_RANGO_FECHA_Result)">
+      <Parameter Name="YEARSTART" Mode="In" Type="String" />
+      <Parameter Name="YEARFINISH" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="REPORTE_USUARIOS_Result">
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Cargo" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_DEPARTAMENTOS_Result">
+    <Property Type="Int32" Name="IdDepartamento" Nullable="false" />
+    <Property Type="String" Name="Nombre_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Siglas" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_TODO_LOS_DOCUMENTOS_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="Usuario_ID" Nullable="true" />
+    <Property Type="String" Name="Origen_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Destino_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_EMPLEADOS_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="Usuario_ID" Nullable="true" />
+    <Property Type="String" Name="Origen_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Destino_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_ORIGEN_POR_DEPARTAMENTO_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="Usuario_ID" Nullable="true" />
+    <Property Type="String" Name="Origen_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Destino_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_DEPARTAMENTO_DESTINO_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="Usuario_ID" Nullable="true" />
+    <Property Type="String" Name="Origen_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Destino_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="REPORTE_RANGO_FECHA_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="Usuario_ID" Nullable="true" />
+    <Property Type="String" Name="Origen_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Destino_Departamento" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+  </ComplexType>
+</Schema>

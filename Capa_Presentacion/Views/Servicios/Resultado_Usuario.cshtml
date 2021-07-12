@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Capa_Entidad.REPORTE_USUARIOS_Result>
+
+@{
+    ViewBag.Title = "Resultado_Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resultado_Usuario</h2>
+
+<p>
+    @Html.ActionLink("Regresar al Buscador por Nombre", "Busqueda_Usuario", "Servicios")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+    <p>
+        @Html.ActionLink("Regresar al Menu de Reportes", "Index", "Servicios")
+    </p>
+
+</table>

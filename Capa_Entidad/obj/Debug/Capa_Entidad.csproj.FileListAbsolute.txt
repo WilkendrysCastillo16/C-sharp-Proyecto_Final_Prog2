@@ -1,0 +1,12 @@
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\Capa_Entidad.dll.config
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\EntityFramework.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\EntityFramework.xml
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Entidad\obj\Debug\Capa_Entidad.csprojResolveAssemblyReference.cache

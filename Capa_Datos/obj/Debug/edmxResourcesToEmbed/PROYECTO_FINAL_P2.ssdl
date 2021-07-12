@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTO_FINAL_P2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DEPARTAMENTO">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Departamento" Type="varchar" MaxLength="25" />
+    <Property Name="Siglas" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="IdDocumento" />
+    </Key>
+    <Property Name="IdDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario_ID" Type="int" />
+    <Property Name="Origen_Departamento" Type="varchar" MaxLength="25" />
+    <Property Name="Destino_Departamento" Type="varchar" MaxLength="25" />
+    <Property Name="Codigo" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+    <Property Name="Departamento" Type="varchar" MaxLength="25" />
+    <Property Name="Cargo" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK__DOCUMENTO__Desti__1ED998B2' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK__DOCUMENTO__Desti__1ED998B2" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK__DOCUMENTO__Orige__1DE57479' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK__DOCUMENTO__Orige__1DE57479" />-->
+  <Association Name="FK__DOCUMENTO__Usuar__1CF15040">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="DOCUMENTO" Type="Self.DOCUMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DOCUMENTO">
+        <PropertyRef Name="Usuario_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK__USUARIO__Departa__1A14E395' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK__USUARIO__Departa__1A14E395" />-->
+  <Function Name="Codigo_Documentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="REPORTE_DEPARTAMENTO_DESTINO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DEPT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_DEPARTAMENTOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DEPARTAMENTO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_EMPLEADOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USUAR" Type="int" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_ORIGEN_POR_DEPARTAMENTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DEPT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_RANGO_FECHA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="YEARSTART" Type="varchar" Mode="In" />
+    <Parameter Name="YEARFINISH" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_TODO_LOS_DOCUMENTOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Documentos" Type="int" Mode="In" />
+  </Function>
+  <Function Name="REPORTE_USUARIOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PROYECTO_FINAL_P2ModelStoreContainer">
+    <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOCUMENTO" EntityType="Self.DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DOCUMENTO__Usuar__1CF15040" Association="Self.FK__DOCUMENTO__Usuar__1CF15040">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="DOCUMENTO" EntitySet="DOCUMENTO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

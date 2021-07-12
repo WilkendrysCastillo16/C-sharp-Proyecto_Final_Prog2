@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="main-w3layouts wrapper">
+        <h1>Reportes</h1>
+        
+            <div>
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Reporte de Departamento<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Busqueda por Nombre", "Busqueda_Departamento", "Servicios")</li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Reportes de Usuario<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Busqueda por Nombre", "Busqueda_Usuario", "Servicios")</li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Reportes de Servicios<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Todos los Documentos", "Busqueda_All_Documento", "Servicios")</li>
+                            <li>@Html.ActionLink("Generados por empleado", "Busqueda_For_Empleado", "Servicios")</li>
+                            <li>@Html.ActionLink("Por departamento origen", "Busqueda_For_Origen_Departamento", "Servicios")</li>
+                            <li>@Html.ActionLink("Por departamento destino ", "Busqueda_For_Destino_Departamento", "Servicios")</li>
+                            <li>@Html.ActionLink("Por Rango de fecha ", "Busqueda_For_rango_fecha", "Servicios")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        
+
+
+
+
+    

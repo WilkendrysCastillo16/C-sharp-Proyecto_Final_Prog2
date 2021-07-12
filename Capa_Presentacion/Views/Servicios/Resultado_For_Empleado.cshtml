@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Capa_Entidad.REPORTE_EMPLEADOS_Result>
+
+@{
+    ViewBag.Title = "Resultado_For_Empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resultado_For_Empleado</h2>
+
+<p>
+    @Html.ActionLink("Regresar al Buscador por ID ", "Busqueda_For_Empleado", "Servicios")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Origen_Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destino_Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origen_Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destino_Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+    <p>
+        @Html.ActionLink("Regresar al Menu de Reportes", "Index", "Servicios")
+    </p>
+
+</table>

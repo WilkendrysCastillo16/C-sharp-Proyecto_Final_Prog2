@@ -1,0 +1,14 @@
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Servicios.dll.config
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Servicios.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Servicios.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Datos.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Entidad.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\EntityFramework.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Datos.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\Capa_Entidad.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\EntityFramework.xml
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\obj\Debug\Capa_Servicios.csprojResolveAssemblyReference.cache
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\obj\Debug\Capa_Servicios.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Servicios\obj\Debug\Capa_Servicios.pdb

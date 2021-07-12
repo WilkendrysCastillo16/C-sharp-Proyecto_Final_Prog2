@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda_For_rango_fecha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Busqueda_For_rango_fecha</h2>
+
+<h4>¿Digite El Rango de Fecha a Buscar?</h4>
+
+<form action="/Servicios/Resultado_Usuario" method="post">
+
+    <input type="date" name="Inicio_Fecha" class="form-control" />
+    <input type="date" name="Fin_Fecha" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" />
+
+</form>
+
+<p>
+    @Html.ActionLink("Regresar al Menu Principal", "Index", "Home")
+</p>

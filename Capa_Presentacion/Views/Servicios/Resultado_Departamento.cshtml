@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Capa_Entidad.REPORTE_DEPARTAMENTOS_Result>
+
+@{
+    ViewBag.Title = "Resultado_Departamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resultado_Departamento</h2>
+
+<p>
+    @Html.ActionLink("Regresar al Buscador por Nombre", "Busqueda_Departamento", "Servicios")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDepartamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Siglas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDepartamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Siglas)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+    <p>
+        @Html.ActionLink("Regresar al Menu de Reportes", "Index", "Servicios")
+    </p>
+
+</table>

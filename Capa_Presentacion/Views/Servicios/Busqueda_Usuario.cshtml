@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda_Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Busqueda_Usuario</h2>
+<h4>¿Digite el Nombre a Buscar?</h4>
+
+<form action="/Servicios/Resultado_Usuario" method="post">
+
+    <input type="text" name="Nomb" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" /> 
+
+</form>
+
+<p>
+    @Html.ActionLink("Regresar al Menu Principal", "Index", "Home")
+</p>
+

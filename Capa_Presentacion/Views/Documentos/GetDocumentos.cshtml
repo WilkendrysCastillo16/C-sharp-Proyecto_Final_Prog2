@@ -1,0 +1,67 @@
+﻿@model Capa_Entidad.DOCUMENTO
+
+@{
+    ViewBag.Title = "GetDocumentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetDocumentos</h2>
+
+<div>
+    <h4>DOCUMENTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origen_Departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origen_Departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino_Departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destino_Departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

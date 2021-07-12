@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda_All_Documento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Busqueda_All_Documento</h2>
+
+<h4>¿Digite el ID a Buscar?</h4>
+
+<form action="/Servicios/Resultado_All_Documento" method="post">
+
+    <input type="number" name="AllDoc" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" />
+
+</form>
+
+<p>
+    @Html.ActionLink("Regresar al Menu Principal", "Index", "Home")
+</p>
+

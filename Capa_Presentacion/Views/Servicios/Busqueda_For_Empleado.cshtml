@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda_For_Empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Busqueda_For_Empleado</h2>
+
+<h4>¿Digite el ID a Buscar?</h4>
+
+<form action="/Servicios/Resultado_For_Empleado" method="post">
+
+    <input type="number" name="ForEmpl" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" />
+
+</form>
+
+<p>
+    @Html.ActionLink("Regresar al Menu Principal", "Index", "Home")
+</p>

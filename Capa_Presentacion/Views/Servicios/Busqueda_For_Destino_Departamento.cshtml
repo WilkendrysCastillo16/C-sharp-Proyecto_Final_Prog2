@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda_For_Destino_Departamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Busqueda_For_Destino_Departamento</h2>
+
+<h4>¿Digite el Departamento de Destino a Buscar?</h4>
+
+<form action="/Servicios/Resultado_For_Departamento_Destino" method="post">
+
+    <input type="text" name="ForDestino)" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" />
+
+</form>
+
+<p>
+    @Html.ActionLink("Regresar al Menu Principal", "Index", "Home")
+</p>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROYECTO_FINAL_P2ModelStoreContainer" CdmEntityContainer="PROYECTO_FINAL_P2Entities">
+    <EntitySetMapping Name="DEPARTAMENTO">
+      <EntityTypeMapping TypeName="PROYECTO_FINAL_P2Model.DEPARTAMENTO">
+        <MappingFragment StoreEntitySet="DEPARTAMENTO">
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="Nombre_Departamento" ColumnName="Nombre_Departamento" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTO">
+      <EntityTypeMapping TypeName="PROYECTO_FINAL_P2Model.DOCUMENTO">
+        <MappingFragment StoreEntitySet="DOCUMENTO">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="PROYECTO_FINAL_P2Model.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Codigo_Documentos" FunctionName="PROYECTO_FINAL_P2Model.Store.Codigo_Documentos" />
+    <FunctionImportMapping FunctionImportName="REPORTE_USUARIOS" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_USUARIOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_USUARIOS_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_DEPARTAMENTOS" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_DEPARTAMENTOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_DEPARTAMENTOS_Result">
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="Nombre_Departamento" ColumnName="Nombre_Departamento" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_TODO_LOS_DOCUMENTOS" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_TODO_LOS_DOCUMENTOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_TODO_LOS_DOCUMENTOS_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_EMPLEADOS" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_EMPLEADOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_EMPLEADOS_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_ORIGEN_POR_DEPARTAMENTO" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_ORIGEN_POR_DEPARTAMENTO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_ORIGEN_POR_DEPARTAMENTO_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_DEPARTAMENTO_DESTINO" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_DEPARTAMENTO_DESTINO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_DEPARTAMENTO_DESTINO_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="REPORTE_RANGO_FECHA" FunctionName="PROYECTO_FINAL_P2Model.Store.REPORTE_RANGO_FECHA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PROYECTO_FINAL_P2Model.REPORTE_RANGO_FECHA_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Origen_Departamento" ColumnName="Origen_Departamento" />
+          <ScalarProperty Name="Destino_Departamento" ColumnName="Destino_Departamento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

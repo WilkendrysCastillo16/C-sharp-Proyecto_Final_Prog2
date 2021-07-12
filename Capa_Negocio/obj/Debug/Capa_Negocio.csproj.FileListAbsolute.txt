@@ -1,0 +1,12 @@
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\obj\Debug\Capa_Negocio.csprojResolveAssemblyReference.cache
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Datos.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Entidad.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\EntityFramework.dll
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\Capa_Entidad.pdb
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\EntityFramework.xml
+C:\Users\felix\Desktop\Wilkendry Castillo (4)\Programacion ll\Proyecto de Programacion_II\Proyecto_Final\Capa_Negocio\bin\Debug\es\EntityFramework.resources.dll

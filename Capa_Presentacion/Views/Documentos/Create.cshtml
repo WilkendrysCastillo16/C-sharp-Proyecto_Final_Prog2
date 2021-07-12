@@ -1,0 +1,82 @@
+﻿@model Capa_Entidad.DOCUMENTO
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>DOCUMENTO</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Usuario_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Usuario_ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usuario_ID, "", new { @class = "text-danger" })*@
+
+                @Html.DropDownListFor(model => model.Usuario_ID, ViewBag.UsuSelectList as SelectList, "Selecione El ID Usuario")
+                @Html.ValidationMessageFor(model => model.Usuario_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Origen_Departamento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Origen_Departamento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Origen_Departamento, "", new { @class = "text-danger" })*@
+
+                @Html.DropDownListFor(model => model.Origen_Departamento, ViewBag.DptSelectList as SelectList, "Selecione El Departamento")
+                @Html.ValidationMessageFor(model => model.Origen_Departamento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Destino_Departamento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Destino_Departamento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Destino_Departamento, "", new { @class = "text-danger" })*@
+
+                @Html.DropDownListFor(model => model.Destino_Departamento, ViewBag.DptSelectList as SelectList, "Selecione El Departamento")
+                @Html.ValidationMessageFor(model => model.Destino_Departamento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar al Inicio", "Index","Home")
+</div>
+
+<div>
+    @Html.ActionLink("Ir a la Lista Documentos", "Details")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
